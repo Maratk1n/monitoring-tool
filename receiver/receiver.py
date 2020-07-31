@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 from influxdb import InfluxDBClient
 import logging
 import settings
@@ -28,8 +28,16 @@ def signal_handler(signum, frame):
 signal.signal(signal.SIGINT, signal_handler)
 
 
-@app.route('/data')
+@app.route('/data', methods=['POST'])
 def put_data():
+    # Example of data:
+    # {
+    #     "temperature": 25.4,
+    #     "pressure": 3.3,
+    #     "engine_speed": 300.0,
+    #     "fuel_level": 89.0
+    # }
+    request_body = request.get_json()
     json_body = [
         {
             "measurement": "maple_farm",
@@ -37,12 +45,7 @@ def put_data():
                 "region": "yanaul"
             },
             "time": datetime.now(),
-            "fields": {
-                "temperature": 25.4,
-                "pressure": 3.3,
-                "engine_speed": 300,
-                "fuel_level": 89
-            }
+            "fields": request_body
         }
     ]
 
