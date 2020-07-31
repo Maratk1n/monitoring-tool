@@ -19,14 +19,15 @@
     "panels": [
       {
         "aliasColors": {},
-        "bars": true,
+        "bars": false,
         "dashLength": 10,
         "dashes": false,
         "datasource": null,
         "fieldConfig": {
           "defaults": {
             "custom": {},
-            "displayName": "Temperature"
+            "displayName": "Temperature",
+            "unit": "celsius"
           },
           "overrides": []
         },
@@ -55,7 +56,7 @@
         "percentage": false,
         "pluginVersion": "7.1.1",
         "pointradius": 2,
-        "points": true,
+        "points": false,
         "renderer": "flot",
         "seriesOverrides": [],
         "spaceLength": 10,
@@ -119,7 +120,7 @@
         },
         "yaxes": [
           {
-            "format": "short",
+            "format": "celsius",
             "label": null,
             "logBase": 1,
             "max": null,
@@ -149,7 +150,8 @@
         "fieldConfig": {
           "defaults": {
             "custom": {},
-            "displayName": "Engine speed"
+            "displayName": "Engine speed",
+            "unit": "rotrpm"
           },
           "overrides": []
         },
@@ -242,7 +244,7 @@
         },
         "yaxes": [
           {
-            "format": "short",
+            "format": "rotrpm",
             "label": null,
             "logBase": 1,
             "max": null,
@@ -264,6 +266,7 @@
         }
       }
     ],
+    "refresh": "5s",
     "schemaVersion": 26,
     "style": "dark",
     "tags": [],
@@ -271,7 +274,7 @@
       "list": []
     },
     "time": {
-      "from": "now-1h",
+      "from": "now-5m",
       "to": "now"
     },
     "timepicker": {
@@ -291,5 +294,5 @@
     "timezone": "",
     "title": "Maple Farm",
     "uid": "P-07YY4Mz",
-    "version": 4
+    "version": 6
   }
