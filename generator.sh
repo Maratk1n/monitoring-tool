@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for i in {1..10}
+while true
 do
   temperature=$(( ( RANDOM % 6 ) + 22 ))
   pressure=$(( ( RANDOM % 2 ) + 3 ))
@@ -12,7 +12,7 @@ do
     --data "{\"temperature\":$temperature.0,\"pressure\":$pressure.0,\"engine_speed\":$engine_speed,\"fuel_level\":$fuel_level}" \
     http://localhost:5000/data
 
-  sleep 0.1
+  sleep 10
 done
 
 
