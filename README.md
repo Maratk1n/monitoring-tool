@@ -3,6 +3,7 @@
 ## Architecture
 
 Below is the main diagram
+
 ![Diagram](docs/architecture.png)
 - Device sends periodically POST requests with JSON in format
 ```
@@ -15,8 +16,8 @@ Below is the main diagram
 ```
 - Receiver gets content and puts all parameters into InfluxDB with the current timestamp.
 - User can get the graphs of Grafana by going directly to the Grafana address in the browser.
-- Chronograf is the user interface and administrative component of the InfluxDB 1.x platform.
-The component may be needed for debugging.
+- Chronograf is the user interface and administrative component of the InfluxDB 1.x platform.\
+The component may be needed for debugging.\
 **Note** that Chronograf does not support username/password authentication. Anyone who can connect to the service has full admin access. Consequently, the service is not publically exposed and can only be access via the loopback interface on the same machine that runs docker.
 ## Ports
 
