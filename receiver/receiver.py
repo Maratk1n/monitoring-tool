@@ -4,7 +4,6 @@ import logging
 import settings
 import signal
 import sys
-import random
 from datetime import datetime
 
 logging.basicConfig(format=settings.LOG_FORMAT,
