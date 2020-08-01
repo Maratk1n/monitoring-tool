@@ -5,7 +5,7 @@
 Below is the main diagram
 
 ![Diagram](docs/architecture.png)
-- Device sends periodically POST requests with JSON in format
+- Device periodically sends POST requests with JSON in format
 ```
 {
     "parameter0": value0,
