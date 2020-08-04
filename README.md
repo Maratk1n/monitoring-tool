@@ -53,3 +53,10 @@ To provision additional data sources, see the Grafana [documentation](http://doc
 Grafana uses dashboard which located at `./grafana-provisioning/dashboards/maple_farm.json`.
 
 To provision additional dashboards, see the Grafana [documentation](http://docs.grafana.org/administration/provisioning/#dashboards) and add a config file to `./grafana-provisioning/dashboards/` before starting the app.
+
+## Query
+
+Example of simple query string:
+```
+SELECT * FROM "db0"."autogen"."maple_farm"
+```
