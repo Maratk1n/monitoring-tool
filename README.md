@@ -60,3 +60,9 @@ Example of simple query string:
 ```
 SELECT * FROM "db0"."autogen"."maple_farm"
 ```
+
+## Easy way to install Docker
+
+```
+curl -sSL https://get.docker.com | sh
+```
