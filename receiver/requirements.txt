@@ -1,2 +1,2 @@
-flask
-influxdb
+flask==1.1.2
+influxdb==5.3.0
