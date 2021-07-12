@@ -44,6 +44,7 @@ services:
       - influxdb
     environment:
       - INFLUX_HOST=influxdb
+    privileged: true
 
 volumes:
   influxdb-storage:
