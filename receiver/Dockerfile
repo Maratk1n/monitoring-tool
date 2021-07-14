@@ -1,4 +1,4 @@
-FROM python:3.7-alpine
+FROM arm32v7/python:3
 
 COPY . /usr/src/app
 WORKDIR /usr/src/app
